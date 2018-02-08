@@ -4,7 +4,6 @@ exports.getConversation = function(text,cb) {
     let date=chrono.parseDate(text) 
     console.log("parsed to string:--",date)
     // console.log("parsed to string:--",date.toString())
-    
     if(date){
         cb(null, {action:"insert",text:"Your appointment is booked on "+date.toString(),date:date});
     }else
